@@ -1,0 +1,13 @@
+# Dependències de Node
+node_modules/
+npm-debug.log*
+
+# Fitxers de configuració local de Vercel
+.vercel
+
+# Fitxers de sistema
+.DS_Store
+Thumbs.db
+# Variables d'entorn
+.env
+.env.local

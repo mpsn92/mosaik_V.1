@@ -1,0 +1,66 @@
+/* Paleta de colores Mosaik */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 2px solid #003366; /* Blau fosc corporatiu */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px; /* Pots ajustar aquesta altura segons preferisques */
+  width: auto;
+  display: block;
+}
+
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #003366;
+  font-weight: 600;
+}
+
+.navbar nav a:hover {
+  color: #ff6347; /* Taronja corporatiu */
+}
+:root {
+  --turquesa: #00ced1;
+  --taronja: #ff6347;
+  --blau-fosc: #003366;
+  --groc: #ffd700;
+  --verd: #7cfc00;
+  --font-main: "Gilroy", "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--blau-fosc);
+}
+
+.hero {
+  background-color: var(--turquesa);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  border-radius: 8px;
+  border: 2px solid var(--blau-fosc);
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 4px 4px 0px var(--taronja);
+}
