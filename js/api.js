@@ -2,7 +2,7 @@
 const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000/api/experiencias"
-    : "/api/experiencias"; // Para producción en Vercel
+    : "https://mosaik-v-1.onrender.com/api/experiencias"; // Para producción en Vercel
 
 async function fetchExperiencies() {
   try {
