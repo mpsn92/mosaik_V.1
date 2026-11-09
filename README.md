@@ -31,20 +31,20 @@ Per executar aquest projecte al teu ordinador:
 npm install
 ```
 
-1. Crea un arxiu .env a l'arrel del projecte amb les següents variables:
+3. Crea un arxiu .env a l'arrel del projecte amb les següents variables:
 
 ```Shell
 PORT=3000
 MONGO_URI=la_teua_cadena_de_conexio_mongodb
 ```
 
-1. Inicia el servidor:
+4. Inicia el servidor:
 
 ```
 npm start
 ```
 
-Obri el navegador:
+5. Obri el navegador:
 
 ```
 a hhtp://localhost:3000
