@@ -49,6 +49,25 @@ app.post("/api/experiencias", async (req, res) => {
     res.status(400).json({ error: "Error al crear la experiencia" });
   }
 });
+// Añade esto debajo del modelo de Experiencia
+const ProducteSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  descripcion: { type: String, required: true },
+  precio: { type: Number, required: true },
+  categoria: { type: String, default: "General" },
+});
+
+const Producte = mongoose.model("Producte", ProducteSchema);
+
+// Añade esta ruta debajo de la ruta GET de experiencias
+app.get("/api/productes", async (req, res) => {
+  try {
+    const productes = await Producte.find();
+    res.json(productes);
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener los productes" });
+  }
+});
 
 // Servir el frontend estático
 app.use(express.static("."));

@@ -12,5 +12,17 @@ async function fetchExperiencies() {
   } catch (error) {
     console.error("Fetch error:", error);
     return [];
+  } // api.js (añade esto al final)
+  async function fetchProductes() {
+    try {
+      const response = await fetch(
+        API_URL.replace("experiencias", "productes"),
+      );
+      if (!response.ok) throw new Error("Error al obtener los productes");
+      return await response.json();
+    } catch (error) {
+      console.error("Fetch error:", error);
+      return [];
+    }
   }
 }

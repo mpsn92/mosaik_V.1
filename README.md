@@ -4,50 +4,63 @@ Mosaik és una plataforma digital que connecta creadors i professionals cultural
 
 ## 🚀 Enllaços del Projecte
 
-- **Web en producció (Vercel):** [https://mosaik-fawn.vercel.app](https://mosaik-fawn.vercel.app) _(Ajusta aquest enllaç si és un altre)_
+- **Web en producció (Vercel):** [https://mosaik-fawn.vercel.app](https://mosaik-fawn.vercel.app)
 - **API Backend (Render):** [https://mosaik-v-1.onrender.com](https://mosaik-v-1.onrender.com)
 - **Repositori GitHub:** [https://github.com/mpsn92/mosaik_V.1](https://github.com/mpsn92/mosaik_V.1)
 
 ## 🛠️ Tecnologies Utilitzades
 
-- **Frontend:** HTML5, CSS3 (Vanilla), JavaScript (Fetch API)
-- **Backend:** Node.js, Express.js
-- **Base de Dades:** MongoDB (mitjançant Mongoose i MongoDB Atlas)
-- **Desplegament:** Vercel (Frontend) i Render (Backend)
+**Frontend:** HTML5, CSS3, JavaScript (Fetch API)
+
+**Backend:** Node.js, Express.js
+
+**Base de Dades:** MongoDB (mitjançant Mongoose i MongoDB Atlas)
+
+**Desplegament:** Vercel (Frontend) i Render (Backend)
 
 ## 📦 Instal·lació en Local
 
 Per executar aquest projecte al teu ordinador:
 
-1. Clona el repositori:
+- Clona el repositori:
+  ```bash
+  git clone https://github.com/mpsn92/mosaik_V.1.git
+  ```
+- Instal·la les dependències:
 
-   ```bash
-   git clone https://github.com/mpsn92/mosaik_V.1.git
-   ```
-
-2. Instal·la les dependències:
-
-```
+```bash
 npm install
 ```
 
+<<<<<<< HEAD
 3. Crea un arxiu .env a l'arrel del projecte amb les següents variables:
+=======
+- Crea un arxiu .env a l'arrel del projecte amb les següents variables:
+>>>>>>> e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
 
-```Shell
+```env
 PORT=3000
 MONGO_URI=la_teua_cadena_de_conexio_mongodb
 ```
 
+<<<<<<< HEAD
 4. Inicia el servidor:
+=======
+- Inicia el servidor:
+>>>>>>> e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
 
-```
+```bash
 npm start
 ```
 
+<<<<<<< HEAD
 5. Obri el navegador:
+=======
+- Obri el navegador a:
 
-```
-a hhtp://localhost:3000
+```http://localhost:3000
+>>>>>>> e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
+
 ```
 
 ## Endpoints de l'API
