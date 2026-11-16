@@ -15,10 +15,10 @@ async function fetchExperiencies() {
   } // api.js (añade esto al final)
   async function fetchProductes() {
     try {
-      const response = await fetch(
-        API_URL.replace("experiencias", "productes"),
-      );
-      if (!response.ok) throw new Error("Error al obtener los productes");
+      // Reemplazamos 'experiencias' por 'productes' en la URL
+      const prodUrl = API_URL.replace("experiencias", "productes");
+      const response = await fetch(prodUrl);
+      if (!response.ok) throw new Error("Error al obtener los productos");
       return await response.json();
     } catch (error) {
       console.error("Fetch error:", error);
