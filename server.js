@@ -27,7 +27,15 @@ const ExperienciaSchema = new mongoose.Schema({
 });
 
 const Experiencia = mongoose.model("Experiencia", ExperienciaSchema);
+// Añade esto debajo del modelo de Experiencia
+const ProducteSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  descripcion: { type: String, required: true },
+  precio: { type: Number, required: true },
+  categoria: { type: String, default: "General" },
+});
 
+const Producte = mongoose.model("Producte", ProducteSchema);
 // Rutas de la API
 // 1. Obtener todas las experiencias
 app.get("/api/experiencias", async (req, res) => {
@@ -36,6 +44,15 @@ app.get("/api/experiencias", async (req, res) => {
     res.json(experiencias);
   } catch (error) {
     res.status(500).json({ error: "Error al obtener las experiencias" });
+  }
+});
+// Añade esta ruta debajo de la ruta GET de experiencias
+app.get("/api/productes", async (req, res) => {
+  try {
+    const productes = await Producte.find();
+    res.json(productes);
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener los productes" });
   }
 });
 
@@ -49,26 +66,16 @@ app.post("/api/experiencias", async (req, res) => {
     res.status(400).json({ error: "Error al crear la experiencia" });
   }
 });
-// Añade esto debajo del modelo de Experiencia
-const ProducteSchema = new mongoose.Schema({
-  nombre: { type: String, required: true },
-  descripcion: { type: String, required: true },
-  precio: { type: Number, required: true },
-  categoria: { type: String, default: "General" },
-});
-
-const Producte = mongoose.model("Producte", ProducteSchema);
-
-// Añade esta ruta debajo de la ruta GET de experiencias
-app.get("/api/productes", async (req, res) => {
+// Ruta para crear un nuevo producto
+app.post("/api/productes", async (req, res) => {
   try {
-    const productes = await Producte.find();
-    res.json(productes);
+    const nuevoProducte = new Producte(req.body);
+    await nuevoProducte.save();
+    res.status(201).json(nuevoProducte);
   } catch (error) {
-    res.status(500).json({ error: "Error al obtener los productes" });
+    res.status(400).json({ error: "Error al crear el producte" });
   }
 });
-
 // Servir el frontend estático
 app.use(express.static("."));
 
