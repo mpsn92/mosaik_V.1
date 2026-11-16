@@ -76,3 +76,9 @@ El projecte inclou un `Dockerfile` i `docker-compose.yml` per aixecar l'entorn l
 ```
 docker-compose up --build
 ```
+
+### Para abrir el archivo otro dia.
+
+git pull origin main
+
+node server.js
