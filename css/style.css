@@ -13,9 +13,10 @@
 }
 
 .logo-img {
-  height: 50px; /* Pots ajustar aquesta altura segons preferisques */
+  height: 80px; /* Antes era 50px. Prueba con 80px o 90px para ver cómo te gusta más */
   width: auto;
   display: block;
+  object-fit: contain; /* Asegura que la imagen no se deforme */
 }
 
 .navbar nav a {
@@ -63,4 +64,11 @@ body {
   padding: 1.5rem;
   background: #fff;
   box-shadow: 4px 4px 0px var(--taronja);
+}
+
+/* Ajuste del logo para móviles */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 60px;
+  }
 }
