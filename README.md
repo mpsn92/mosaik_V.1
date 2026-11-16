@@ -32,33 +32,23 @@ Per executar aquest projecte al teu ordinador:
 npm install
 ```
 
-# <<<<<<< HEAD 3. Crea un arxiu .env a l'arrel del projecte amb les següents variables:
-
 - Crea un arxiu .env a l'arrel del projecte amb les següents variables:
-
-> > > > > > > e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
 
 ```env
 PORT=3000
 MONGO_URI=la_teua_cadena_de_conexio_mongodb
 ```
 
-# <<<<<<< HEAD 4. Inicia el servidor:
-
 - Inicia el servidor:
-
-> > > > > > > e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
 
 ```bash
 npm start
 ```
 
-# <<<<<<< HEAD 5. Obri el navegador:
-
 - Obri el navegador a:
 
 ```http://localhost:3000
->>>>>>> e71b486 (Añadimos datos reales, sección de productes y botón de profesionales)
+
 ```
 
 ## Endpoints de l'API
