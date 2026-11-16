@@ -14,6 +14,7 @@
 
 .logo-img {
   height: 80px; /* Antes era 50px. Prueba con 80px o 90px para ver cómo te gusta más */
+  max-height: 100px;
   width: auto;
   display: block;
   object-fit: contain; /* Asegura que la imagen no se deforme */

@@ -8,6 +8,12 @@ Mosaik és una plataforma digital que connecta creadors i professionals cultural
 - **API Backend (Render):** [https://mosaik-v-1.onrender.com](https://mosaik-v-1.onrender.com)
 - **Repositori GitHub:** [https://github.com/mpsn92/mosaik_V.1](https://github.com/mpsn92/mosaik_V.1)
 
+## ✨ Funcionalitats Principals
+
+- **Experiències Culturals:** Visualització dinàmica d'excursions, visites guiades i escape rooms a València, Granada i Còrdova.
+- **Productes Culturals:** Catàleg d'artesania (fang, cuir, tèxtil, brodat) i entrades de teatre.
+- **Secció de Professionals:** Àrea de captació de talents amb un botó d'acció per unir-se a la xarxa de Mosaik.
+
 ## 🛠️ Tecnologies Utilitzades
 
 **Frontend:** HTML5, CSS3, JavaScript (Fetch API)
@@ -53,8 +59,15 @@ npm start
 
 ## Endpoints de l'API
 
+### Experiències
+
 - `GET /api/experiencias` - Retorna un llistat de totes les experiències culturals.
 - `POST /api/experiencias` - Crea una nova experiència (Requereix JSON amb `nombre`, `descripcion`, `precio`).
+
+### Productes
+
+- `GET /api/productes` - Retorna un llistat de tots els productes culturals i artesania.
+- `POST /api/productes` - Crea un nou producte (Requereix JSON amb `nombre`, `descripcion`, `precio`, `categoria`).
 
 ## Docker
 
